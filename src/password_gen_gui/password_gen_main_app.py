@@ -16,8 +16,8 @@ class My_Application(tk.Tk):
         super().__init__()
 
         # sets fonts
-        pyglet.font.add_file('../Assets/NanumGothicCoding-Bold.ttf')
-        pyglet.font.add_file('../Assets/NanumGothicCoding-Bold.ttf')
+        pyglet.font.add_file('../assets/fonts/NanumGothicCoding-Bold.ttf')
+        pyglet.font.add_file('../assets/fonts/NanumGothicCoding-Bold.ttf')
 
         # set all variables which will be used in upcoming methods
         self.user_password_gened = password_text_gened
@@ -100,7 +100,7 @@ class My_Application(tk.Tk):
 
         # Runs window and adds details such as background color or icon
         self.configure(bg="#FFE6E6")
-        self.iconphoto(False, tk.PhotoImage(file="../Assets/lockIcon.png"))
+        self.iconphoto(False, tk.PhotoImage(file="../assets/lockIcon.png"))
         self.title(" Password Generator")
         self.resizable(False, False)
         self.geometry("500x700")
