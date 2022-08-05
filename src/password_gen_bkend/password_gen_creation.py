@@ -3,9 +3,11 @@ from src.password_gen_bkend import password_gen_api
 
 
 class Pass_Generator:
-
+    """Called by My_Applicatoin, communicates with API to get unique random words off of a large dataset. Dynamically
+    computes how long each word should be and how many words can fit in a password"""
     def __init__(self, password_length, password_symbol):
 
+        # Variables which will be used to generate password
         self.user_password_length = int(password_length)
         self.user_password_symbol = password_symbol
 
@@ -14,9 +16,11 @@ class Pass_Generator:
         self.my_API = password_gen_api.Word_API(math.floor(self.user_password_length / 3))
 
     def contact_api(self):
+        # Creates class and communicates with API
         self.API_words = self.my_API.generate_words(2)
 
     def password_creator(self):
+        # Iterates through words retrieved by API, and creates password based off of these words
 
         for word in self.API_words:
 
